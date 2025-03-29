@@ -1,0 +1,21 @@
+# Basic blink pattern
+EP 0
+SET 0 0, 1 1, 2 2, 3 3
+WAIT 30
+CLEAR 0 0, 1 1, 2 2, 3 3
+WAIT 30
+LOOP
+
+# Memory calculator (Adds 15 + 7 = 22)
+EP 0
+STORE 10 15   # Store 15 at address 10
+STORE 11 7    # Store 7 at address 11
+ADD 10 11 12  # Add addresses 10+11, store result in 12
+LOAD 12       # Display result on pixel 0,0 if non-zero
+
+# Bitwise XOR example
+EP 0
+STORE 20 0b1010
+STORE 21 0b1100
+XOR 20 21 22  # Result should be 0b0110 (6)
+LOAD 22
