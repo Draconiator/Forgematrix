@@ -25,31 +25,31 @@ A retro-inspired emulator for a custom 2-bit processor architecture with 4x4 LED
 ## Installation
 
 1. Clone repository:
-```bash
+
 git clone https://github.com/yourusername/forgematrix-emulator.git
 cd forgematrix-emulator
-```
+
 
 2. Install dependencies:
-```bash
+
 pip install PyQt5
-```
+
 
 3. Run emulator:
-```bash
+
 python main.py
-```
+
 
 ## Basic Usage
 
 1. Write program in the editor:
-```asm
+
 EP 0       ; Entry point at address 0
 SETALL     ; Light up all pixels
 WAIT 30    ; Wait 0.25s (30 cycles @ 120Hz)
 SETNONE    ; Turn off all pixels
 LOOP       ; Repeat forever
-```
+
 
 2. Click **Run** to execute
 3. Use **Step** for debugging
@@ -58,23 +58,23 @@ LOOP       ; Repeat forever
 ## Example Programs
 
 ### Blink Pattern
-```asm
+
 EP 0
 SET 0 0, 1 1, 2 2, 3 3
 WAIT 60
 CLEAR 0 0, 1 1, 2 2, 3 3
 WAIT 60
 LOOP
-```
+
 
 ### Memory Calculator
-```asm
+
 EP 0
 STORE 10 15    ; Store 15 in RAM[10]
 STORE 11 30    ; Store 30 in RAM[11]
 ADD 10 11 12   ; RAM[12] = 15+30
 SCRATCH_COPY 12 0 ; Save result to scratchpad
-```
+
 
 ## Documentation
 
@@ -89,9 +89,9 @@ Full instruction set documentation available in the emulator's Help menu:
 ## Testing
 
 Run unit tests:
-```bash
+
 python -m unittest test_emulator.py
-```
+
 
 ## Contributing
 
@@ -106,4 +106,3 @@ Contributions welcome! Please:
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
----
